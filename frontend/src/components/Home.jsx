@@ -15,6 +15,7 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import { useNavigate } from "react-router-dom";
 import Assessment from "./Assessment";
+import Navbar from "./Navbar";
 
 const Home = () => {
   const navigate= useNavigate();
@@ -25,7 +26,7 @@ const Home = () => {
     <Box sx={{ backgroundColor: "#fff" }}>
 
       {/* Navbar */}
-      <AppBar
+      {/* <AppBar
         position="static"
         elevation={0}
         sx={{
@@ -50,8 +51,8 @@ const Home = () => {
           <Button sx={{ color: "#970747" }}>Services</Button>
           <Button sx={{ color: "#970747" }}>Contact</Button>
         </Toolbar>
-      </AppBar>
-
+      </AppBar> */}
+      <Navbar/>
       {/* Hero Section */}
       <Container maxWidth="lg" sx={{ py: 10 }}>
         <Grid container spacing={8} alignItems="center">
@@ -101,7 +102,7 @@ const Home = () => {
           <Grid item xs={12} md={6}>
             <Box
               component="img"
-              src="public/images/meditation.jpeg"
+              src="/images/meditation.png"
               alt="therapy"
               sx={{
                 width: "100%",
@@ -121,7 +122,7 @@ const Home = () => {
           <Grid item xs={12} md={6}>
             <Box
               component="img"
-              src="public/images/aichatbot.jpeg"
+              src="/images/aichatbot.png"
               alt="support"
               sx={{
                 width: "100%",
@@ -177,7 +178,7 @@ const Home = () => {
           <Grid item xs={12} md={6}>
             <Box
               component="img"
-              src="public/images/therapist.jpeg"
+              src="/images/therapist.png"
               alt="growth"
               sx={{
                 width: "100%",

@@ -11,6 +11,7 @@ import {
   Card,
   CardContent
 } from "@mui/material";
+import Navbar from "./Navbar";
 
 const questions = [
   "How often do you feel stressed?",
@@ -53,6 +54,9 @@ const Assessment = () => {
   };
 
   return (
+    <>
+    <Navbar/>
+
     <Box sx={{ p: 5 }}>
       <Typography
         sx={{
@@ -158,6 +162,7 @@ const Assessment = () => {
   </Card>
 )}
     </Box>
+    </>
   );
 };
 

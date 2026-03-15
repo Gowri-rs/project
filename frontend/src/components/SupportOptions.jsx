@@ -10,8 +10,11 @@ import {
 import ChatIcon from "@mui/icons-material/Chat";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 const SupportOptions = () => {
+  const navigate = useNavigate();
   const supports = [
     {
       icon: <ChatIcon sx={{ fontSize: 55, color: "#970747" }} />,
@@ -34,7 +37,11 @@ const SupportOptions = () => {
   ];
 
   return (
+    <>
+    <Navbar/>
+    
     <Box sx={{ px: 5, py: 8, backgroundColor: "#fff" }}>
+      
       <Typography
         sx={{
           fontSize: "42px",
@@ -115,6 +122,7 @@ const SupportOptions = () => {
         ))}
       </Grid>
     </Box>
+    </>
   );
 };
 

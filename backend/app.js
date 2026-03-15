@@ -10,7 +10,6 @@ const assessmentRoutes = require("./routes/assessmentRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const aiChatRoutes = require("./routes/aiChatRoutes");
 
-
 const app = express();
 
 connectDB();

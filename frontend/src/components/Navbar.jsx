@@ -5,9 +5,19 @@ import {
   Button,
   Box
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+    const token = localStorage.getItem("token");
+
+  const navigate = useNavigate();
+  const removeUser=() =>{
+      // const navigate = useNavigate();
+      localStorage.removeItem("token");
+      navigate("/")
+  }
+
   return (
     <AppBar
       position="static"
@@ -32,7 +42,7 @@ const Navbar = () => {
         <Box sx={{ display: "flex", gap: 2 }}>
           <Button
             component={Link}
-            to="/"
+            to="/home"
             sx={{ color: "#970747" }}
           >
             Home
@@ -48,18 +58,10 @@ const Navbar = () => {
 
           <Button
             component={Link}
-            to="/chat"
+            to="/supportoptions"
             sx={{ color: "#970747" }}
           >
-            AI Support
-          </Button>
-
-          <Button
-            component={Link}
-            to="/therapists"
-            sx={{ color: "#970747" }}
-          >
-            Therapists
+            Help
           </Button>
 
           <Button
@@ -69,6 +71,14 @@ const Navbar = () => {
           >
             Admin
           </Button>
+
+            <Button
+            onClick={removeUser}
+            sx={{ color: "#970747" }}
+          >
+            Logout
+          </Button>
+
         </Box>
       </Toolbar>
     </AppBar>

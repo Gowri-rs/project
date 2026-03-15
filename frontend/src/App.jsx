@@ -9,6 +9,7 @@ import Assessment from "./components/Assessment";
 import TherapistPage from "./components/Therapists";
 import SupportOptions from "./components/SupportOptions";
 import AdminDashboard from "./components/AdminDashboard";
+import Chatbot from "./components/Chatbot";
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
 
       <Route path="/supportoptions" element={<SupportOptions />} />
 
-      <Route path="/chat" element={<Chat />} />
+      <Route path="/chat" element={<Chatbot />} />
 
       <Route path="/assessment" element={<Assessment />} />
 
